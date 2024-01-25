@@ -105,7 +105,7 @@
 
         function_layer {
             bindings = <&mo 3>;
-            key-positions = <34 35>;
+            key-positions = <33 36>;
         };
     };
 
