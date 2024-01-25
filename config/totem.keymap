@@ -160,7 +160,7 @@
         &trans        &trans        &trans     &trans          &trans    &kp C_PREVIOUS  &kp PAGE_UP    &kp INSERT      &kp HOME         &kp C_VOLUME_UP
         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp C_PAUSE     &kp LEFT       &kp UP_ARROW    &kp RIGHT_ARROW  &kp C_MUTE
 &trans  &trans        &trans        &trans     &trans          &trans    &kp C_NEXT      &kp PAGE_DOWN  &kp DOWN_ARROW  &kp END          &kp C_VOLUME_DOWN  &trans
-                                    &trans     &trans          &trans    &mkp MB1        &mkp MB3       &mkp MB2
+                                    &trans     &trans          &trans    &trans          &trans         &trans
             >;
 
             label = "NAV";
