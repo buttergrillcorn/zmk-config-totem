@@ -189,7 +189,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        Base {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "BASE";
@@ -206,47 +206,47 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q  &kp W  &kp E       &kp R           &kp T        &kp Y          &kp U      &kp I       &kp O    &kp P
-              &kp A  &kp S  &kp D       &kp F           &kp G        &kp H          &kp J      &kp K       &kp L    &kp SEMI
-&kp LEFT_GUI  &kp Z  &kp X  &kp C       &kp V           &kp B        &kp N          &kp M      &kp COMMA   &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
-                            &kp ESCAPE  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &kp LCTRL  &kp DELETE
+              &kp Q  &kp W  &kp E       &kp R      &kp T             &kp Y      &kp U          &kp I       &kp O    &kp P
+              &kp A  &kp S  &kp D       &kp F      &kp G             &kp H      &kp J          &kp K       &kp L    &kp SEMI
+&kp LEFT_GUI  &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N      &kp M          &kp COMMA   &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
+                            &kp ESCAPE  &kp SPACE  &kp LEFT_SHIFT    &kp LCTRL  &kp BACKSPACE  &kp DELETE
             >;
         };
 
-        number_layer {
+        Number {
             bindings = <
-        &trans   &trans  &trans  &trans  &trans    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
-        &kp TAB  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH
-&trans  &trans   &trans  &trans  &trans  &trans    &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL     &trans
-                         &trans  &trans  &trans    &trans     &trans  &trans
+        &kp TAB       &trans  &trans  &trans  &trans    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
+        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH
+&trans  &trans        &trans  &trans  &trans  &trans    &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL     &trans
+                              &trans  &trans  &trans    &trans     &trans  &trans
             >;
 
             label = "NUM";
         };
 
-        symbol_layer {
+        Symbol {
             bindings = <
-        &trans   &trans  &trans  &trans  &trans    &kp TILDE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &trans
-        &kp TAB  &trans  &trans  &trans  &trans    &kp GRAVE  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans
-&trans  &trans   &trans  &trans  &trans  &trans    &kp PIPE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &trans
-                         &trans  &trans  &trans    &trans     &trans           &trans
+        &kp TAB       &trans  &trans  &trans  &trans    &kp TILDE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &trans
+        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp GRAVE  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans
+&trans  &trans        &trans  &trans  &trans  &trans    &kp PIPE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &trans
+                              &trans  &trans  &trans    &trans     &trans           &trans
             >;
 
             label = "SYM";
         };
 
-        navigation_layer {
+        Navigation {
             bindings = <
-        &trans   &trans  &trans  &trans  &trans    &kp C_STOP        &kp HOME                 &kp PAGE_DOWN      &kp PG_UP        &kp END
-        &kp TAB  &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE  &kp LEFT                 &kp DOWN           &kp UP_ARROW     &kp RIGHT
-&trans  &trans   &trans  &trans  &trans  &trans    &kp C_MUTE        &mt C_REWIND C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &mt C_FAST_FORWARD C_NEXT  &kp LALT
-                         &trans  &trans  &trans    &trans            &trans                   &trans
+        &kp TAB       &trans  &trans  &trans  &trans    &kp C_STOP        &kp HOME                 &kp PAGE_DOWN      &kp PG_UP        &kp END
+        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE  &kp LEFT                 &kp DOWN           &kp UP_ARROW     &kp RIGHT
+&trans  &trans        &trans  &trans  &trans  &trans    &kp C_MUTE        &mt C_REWIND C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &mt C_FAST_FORWARD C_NEXT  &kp LALT
+                              &trans  &trans  &trans    &trans            &trans                   &trans
             >;
 
             label = "NAV";
         };
 
-        function_layer {
+        Function {
             bindings = <
             &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans    &kp F7  &kp F8  &kp F9  &kp F10
             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans    &kp F4  &kp F5  &kp F6  &kp F11
@@ -254,10 +254,10 @@
                                           &trans         &trans         &trans           &trans    &trans  &trans
             >;
 
-            label = "FUN";
+            label = "FUNC";
         };
 
-        game_layer {
+        Game {
             bindings = <
           &kp TAB    &kp Q  &kp X       &kp E      &kp R          &trans  &trans  &trans  &trans  &trans
           &kp LCTRL  &kp A  &kp W       &kp D      &kp F          &trans  &trans  &trans  &trans  &trans
@@ -265,10 +265,10 @@
                             &kp ESCAPE  &kp SPACE  &lt 6 ENTER    &trans  &trans  &trans
             >;
 
-            label = "GME";
+            label = "GAME";
         };
 
-        game_layer_ext {
+        GamePlus {
             bindings = <
        &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans
        &trans        &trans  &trans  &trans  &kp H     &trans  &trans  &trans  &trans  &trans
@@ -276,7 +276,7 @@
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "GME+";
+            label = "GAME+";
         };
     };
 };
