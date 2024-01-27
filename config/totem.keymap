@@ -42,7 +42,7 @@
 
         Enter {
             bindings = <&kp RETURN>;
-            key-positions = <16 17 18>;
+            key-positions = <17 18>;
             timeout-ms = <25>;
         };
 
@@ -121,14 +121,8 @@
             key-positions = <20 31>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <17 18>;
-            timeout-ms = <25>;
-        };
-
-        delete {
-            bindings = <&kp DEL>;
+        escape {
+            bindings = <&kp ESCAPE>;
             key-positions = <17 16>;
             timeout-ms = <25>;
         };
