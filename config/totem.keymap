@@ -34,7 +34,7 @@
         compatible = "zmk,combos";
 
         Tab {
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             key-positions = <11 10>;
             bindings = <&kp TAB>;
             layers = <0 1 4 2 3>;
@@ -43,76 +43,76 @@
         Enter {
             bindings = <&kp RETURN>;
             key-positions = <17 18>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
         };
 
         Undo {
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
             key-positions = <22 23>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
             key-positions = <23 24>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
             key-positions = <22 23 24>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         left_parenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <4 2>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         right_parenthesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <5 7>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <14 12>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <15 17>;
-            timeout-ms = <10>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         left_bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <25 23>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0 1 2 3 4>;
         };
 
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <26 28>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
@@ -124,33 +124,41 @@
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <17 16>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
         };
 
         num_layer {
             bindings = <&mo 1>;
             key-positions = <12 13>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         sym_layer {
             bindings = <&mo 2>;
             key-positions = <12 11>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         nav_layer {
             bindings = <&mo 3>;
             key-positions = <12 11 13>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <0>;
         };
 
         func_layer {
             bindings = <&mo 4>;
             key-positions = <34 35>;
+            timeout-ms = <30>;
+        };
+
+        window_manager {
+            bindings = <&mo 7>;
+            key-positions = <10 11 12 13>;
+            timeout-ms = <35>;
+            layers = <0>;
         };
     };
 
@@ -277,6 +285,15 @@
             >;
 
             label = "GAME+";
+        };
+
+        WM {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &kp LG(Q)  &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp LG(W)  &kp LG(N4)        &kp LG(N5)  &kp LG(N6)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LG(F)  &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(N3)  &trans  &trans
+                        &trans  &trans  &trans    &trans     &trans            &trans
+            >;
         };
     };
 };
