@@ -33,53 +33,45 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        Tab {
             timeout-ms = <25>;
             key-positions = <11 10>;
-            bindings = <&kp ESC>;
-            layers = <0>;
-        };
-
-        Tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12 13>;
-            timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 4 2 3>;
         };
 
         Enter {
             bindings = <&kp RETURN>;
             key-positions = <16 17 18>;
             timeout-ms = <25>;
-            layers = <0>;
         };
 
         Undo {
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
             key-positions = <22 23>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
             key-positions = <23 24>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
             key-positions = <22 23 24>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         left_parenthesis {
@@ -93,14 +85,14 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <5 6>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <13 14>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         right_brace {
@@ -114,7 +106,7 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <24 25>;
             timeout-ms = <25>;
-            layers = <0>;
+            layers = <0 1 2 3 4>;
         };
 
         right_bracket {
@@ -125,12 +117,45 @@
         };
 
         game_layer_toggle {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <20 31>;
         };
 
-        function_layer {
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
+            timeout-ms = <25>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <17 16>;
+            timeout-ms = <25>;
+        };
+
+        num_layer {
+            bindings = <&mo 1>;
+            key-positions = <12 13>;
+            timeout-ms = <25>;
+            layers = <0>;
+        };
+
+        sym_layer {
+            bindings = <&mo 2>;
+            key-positions = <12 11>;
+            timeout-ms = <25>;
+            layers = <0>;
+        };
+
+        nav_layer {
             bindings = <&mo 3>;
+            key-positions = <12 11 13>;
+            timeout-ms = <25>;
+            layers = <0>;
+        };
+
+        func_layer {
+            bindings = <&mo 4>;
             key-positions = <34 35>;
         };
     };
@@ -187,36 +212,41 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q  &kp W  &kp E           &kp R      &kp T        &kp Y        &kp U                &kp I       &kp O    &kp P
-              &kp A  &kp S  &kp D           &kp F      &kp G        &kp H        &kp J                &kp K       &kp L    &kp SEMI
-&kp LEFT_GUI  &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N        &kp M                &kp COMMA   &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
-                            &kp LEFT_SHIFT  &kp SPACE  &lt 1 TAB    &lt 2 ENTER  &mt LCTRL BACKSPACE  &kp DELETE
+              &kp Q  &kp W  &kp E       &kp R           &kp T        &kp Y          &kp U      &kp I       &kp O    &kp P
+              &kp A  &kp S  &kp D       &kp F           &kp G        &kp H          &kp J      &kp K       &kp L    &kp SEMI
+&kp LEFT_GUI  &kp Z  &kp X  &kp C       &kp V           &kp B        &kp N          &kp M      &kp COMMA   &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
+                            &kp ESCAPE  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &kp LCTRL  &kp DELETE
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         number_layer {
             bindings = <
-          &trans        &trans        &trans     &trans     &trans    &kp EQUAL       &kp N7  &kp N8    &kp N9  &kp TILDE
-          &kp LEFT_GUI  &kp LEFT_ALT  &kp LSHFT  &kp LCTRL  &trans    &kp MINUS       &kp N4  &kp N5    &kp N6  &kp GRAVE
-&kp LGUI  &trans        &trans        &trans     &trans     &trans    &kp UNDERSCORE  &kp N1  &kp N2    &kp N3  &kp BACKSLASH  &kp LALT
-                                      &trans     &trans     &trans    &kp PLUS        &kp N0  &kp PIPE
+        &trans   &trans  &trans  &trans  &trans    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
+        &kp TAB  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH
+&trans  &trans   &trans  &trans  &trans  &trans    &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL     &trans
+                         &trans  &trans  &trans    &trans     &trans  &trans
             >;
 
             label = "NUM";
         };
 
+        symbol_layer {
+            bindings = <
+        &trans   &trans  &trans  &trans  &trans    &kp TILDE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &trans
+        &kp TAB  &trans  &trans  &trans  &trans    &kp GRAVE  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans
+&trans  &trans   &trans  &trans  &trans  &trans    &kp PIPE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &trans
+                         &trans  &trans  &trans    &trans     &trans           &trans
+            >;
+
+            label = "SYM";
+        };
+
         navigation_layer {
             bindings = <
-          &trans        &trans        &trans     &trans     &trans    &kp C_PREVIOUS  &kp PAGE_UP    &kp INSERT      &kp HOME         &kp C_VOLUME_UP
-          &kp LEFT_GUI  &kp LEFT_ALT  &kp LSHFT  &kp LCTRL  &trans    &kp C_PAUSE     &kp LEFT       &kp UP_ARROW    &kp RIGHT_ARROW  &kp C_MUTE
-&kp LGUI  &trans        &trans        &trans     &trans     &trans    &kp C_NEXT      &kp PAGE_DOWN  &kp DOWN_ARROW  &kp END          &kp C_VOLUME_DOWN  &kp LALT
-                                      &trans     &trans     &trans    &trans          &trans         &trans
+        &trans   &trans  &trans  &trans  &trans    &kp C_STOP        &kp HOME                 &kp PAGE_DOWN      &kp PG_UP        &kp END
+        &kp TAB  &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE  &kp LEFT                 &kp DOWN           &kp UP_ARROW     &kp RIGHT
+&trans  &trans   &trans  &trans  &trans  &trans    &kp C_MUTE        &mt C_REWIND C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &mt C_FAST_FORWARD C_NEXT  &kp LALT
+                         &trans  &trans  &trans    &trans            &trans                   &trans
             >;
 
             label = "NAV";
@@ -238,7 +268,7 @@
           &kp TAB    &kp Q  &kp X       &kp E      &kp R          &trans  &trans  &trans  &trans  &trans
           &kp LCTRL  &kp A  &kp W       &kp D      &kp F          &trans  &trans  &trans  &trans  &trans
 &kp LALT  &kp LSHFT  &kp Z  &kp S       &kp C      &kp V          &trans  &trans  &trans  &trans  &trans  &trans
-                            &kp ESCAPE  &kp SPACE  &lt 5 ENTER    &trans  &trans  &trans
+                            &kp ESCAPE  &kp SPACE  &lt 6 ENTER    &trans  &trans  &trans
             >;
 
             label = "GME";
