@@ -72,6 +72,16 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <5 7>;
         };
+
+        reset_left {
+            bindings = <&sys_reset>;
+            key-positions = <0 21 4 25>;
+        };
+
+        reset_right {
+            bindings = <&sys_reset>;
+            key-positions = <5 9 26 30>;
+        };
     };
 
     macros {
