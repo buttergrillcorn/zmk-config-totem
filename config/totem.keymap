@@ -42,6 +42,7 @@
         combo_layer_3 {
             bindings = <&mo 3>;
             key-positions = <33 36>;
+            timeout-ms = <200>;
         };
 
         bracket_l {
@@ -99,13 +100,6 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
-        };
-
-        lang_switch: lang_switch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "LANG_SWITCH";
         };
     };
 
