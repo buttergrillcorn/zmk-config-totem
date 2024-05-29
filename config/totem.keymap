@@ -253,10 +253,10 @@
 
         WindowManager {
             bindings = <
-        &kp LG(N1)  &kp LG(N2)  &kp LG(N3)     &kp LG(N4)    &kp LG(N5)              &kp LG(N6)        &kp LG(N7)            &kp LG(N8)     &kp LG(N9)  &trans
-        &kp LG(Q)   &kp LG(W)   &kp LG(D)      &kp LG(F)     &kp LG(G)               &kp LG(H)         &kp LG(J)             &kp LG(K)      &kp LG(L)   &kp LG(ENTER)
-&trans  &kp LG(X)   &kp LG(C)   &kp LG(E)      &kp LG(B)     &kp LG(N)               &trans            &trans                &trans         &trans      &trans         &trans
-                                &kp LG(LSHFT)  &kp LEFT_GUI  &kp LC(LG(LEFT_GUI))    &kp LC(LEFT_ALT)  &kp LG(LC(LEFT_ALT))  &kp LG(LCTRL)
+        &kp LG(N1)  &kp LG(N2)  &kp LG(N3)     &kp LG(N4)    &kp LG(N5)           &kp LG(N6)        &kp LG(N7)            &kp LG(N8)     &kp LG(N9)  &trans
+        &kp LG(Q)   &kp LG(W)   &kp LG(D)      &kp LG(F)     &kp LG(G)            &kp LG(H)         &kp LG(J)             &kp LG(K)      &kp LG(L)   &kp LG(ENTER)
+&trans  &kp LG(X)   &kp LG(C)   &kp LG(E)      &kp LG(B)     &kp LG(N)            &trans            &trans                &trans         &trans      &trans         &trans
+                                &kp LG(LSHFT)  &kp LEFT_GUI  &kp LC(LG(LCTRL))    &kp LC(LEFT_ALT)  &kp LG(LC(LEFT_ALT))  &kp LG(LCTRL)
             >;
 
             label = "WM";
