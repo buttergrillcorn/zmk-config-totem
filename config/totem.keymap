@@ -13,6 +13,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -33,45 +34,38 @@
     combos {
         compatible = "zmk,combos";
 
-        Tab {
-            timeout-ms = <30>;
-            key-positions = <11 10>;
-            bindings = <&kp TAB>;
-            layers = <0 1 4 2 3>;
-        };
-
-        Enter {
-            bindings = <&kp RETURN>;
-            key-positions = <17 18>;
-            timeout-ms = <30>;
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <17 16>;
+            timeout-ms = <50>;
         };
 
         Undo {
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
             key-positions = <22 23>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
             key-positions = <23 24>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
             key-positions = <22 23 24>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         left_parenthesis {
@@ -85,14 +79,14 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <5 7>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <14 12>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         right_brace {
@@ -106,7 +100,7 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <25 23>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 3>;
         };
 
         right_bracket {
@@ -117,48 +111,21 @@
         };
 
         game_layer_toggle {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <20 31>;
         };
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <17 16>;
-            timeout-ms = <30>;
-        };
-
-        num_layer {
-            bindings = <&mo 1>;
-            key-positions = <12 13>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-
-        sym_layer {
-            bindings = <&mo 2>;
-            key-positions = <12 11>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-
-        nav_layer {
-            bindings = <&mo 3>;
-            key-positions = <12 11 13>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-
         func_layer {
-            bindings = <&mo 4>;
-            key-positions = <34 35>;
-            timeout-ms = <30>;
+            bindings = <&mo 3>;
+            key-positions = <36 33>;
+            timeout-ms = <200>;
+            layers = <3>;
         };
 
-        window_manager {
-            bindings = <&mo 7>;
-            key-positions = <10 11 12 13>;
-            timeout-ms = <35>;
-            layers = <0>;
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>;
+            timeout-ms = <50>;
         };
     };
 
@@ -214,52 +181,40 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q  &kp W  &kp E       &kp R           &kp T        &kp Y          &kp U      &kp I       &kp O    &kp P
-              &kp A  &kp S  &kp D       &kp F           &kp G        &kp H          &kp J      &kp K       &kp L    &kp SEMI
-&kp LEFT_GUI  &kp Z  &kp X  &kp C       &kp V           &kp B        &kp N          &kp M      &kp COMMA   &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
-                            &kp ESCAPE  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &kp LCTRL  &kp DELETE
+              &kp Q  &kp W  &kp E                &kp R  &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P
+              &kp A  &kp S  &kp D                &kp F  &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI
+&kp LEFT_GUI  &kp Z  &kp X  &kp C                &kp V  &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt LEFT_ALT SQT
+                            &mt LEFT_SHIFT CAPS  &sl 1  &kp SPACE    &kp BACKSPACE  &sl 2  &sk LCTRL
             >;
-        };
-
-        Number {
-            bindings = <
-        &kp TAB       &trans  &trans  &trans  &trans    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
-        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH
-&trans  &trans        &trans  &trans  &trans  &trans    &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL     &trans
-                              &trans  &trans  &trans    &trans     &trans  &trans
-            >;
-
-            label = "NUM";
-        };
-
-        Symbol {
-            bindings = <
-        &kp TAB       &trans  &trans  &trans  &trans    &kp TILDE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &trans
-        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp GRAVE  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans
-&trans  &trans        &trans  &trans  &trans  &trans    &kp PIPE   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &trans
-                              &trans  &trans  &trans    &trans     &trans           &trans
-            >;
-
-            label = "SYM";
         };
 
         Navigation {
             bindings = <
-        &kp TAB       &trans  &trans  &trans  &trans    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_VOL_UP
-        &kp LEFT_GUI  &trans  &trans  &trans  &trans    &kp LEFT        &kp DOWN       &kp UP_ARROW  &kp RIGHT   &kp K_MUTE
-&trans  &trans        &trans  &trans  &trans  &trans    &kp C_PREVIOUS  &kp C_PLAY     &kp C_PAUSE   &kp C_NEXT  &kp C_VOL_DN  &kp LALT
-                              &trans  &trans  &trans    &trans          &trans         &trans
+       &kp TAB       &trans        &trans     &trans          &trans    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_VOL_UP
+       &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL  &sk LEFT_SHIFT  &trans    &kp LEFT        &kp DOWN       &kp UP_ARROW  &kp RIGHT   &kp ENTER
+&to 0  &trans        &trans        &trans     &trans          &trans    &kp C_PREVIOUS  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_MUTE
+                                   &trans     &trans          &trans    &trans          &trans         &trans
             >;
 
             label = "NAV";
         };
 
+        Number {
+            label = "NUM";
+            bindings = <
+       &kp TAB       &trans        &trans     &trans          &trans    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp GRAVE
+       &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL  &sk LEFT_SHIFT  &trans    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp ENTER
+&to 0  &trans        &trans        &trans     &trans          &trans    &kp N0     &kp N1  &kp N2  &kp N3  &kp BSLH   &trans
+                                   &trans     &trans          &trans    &trans     &trans  &trans
+            >;
+        };
+
         Function {
             bindings = <
-            &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans    &kp F7  &kp F8  &kp F9  &kp F10
-            &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans    &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_CLR  &trans         &trans         &trans         &trans         &trans           &kp CLCK  &kp F1  &kp F2  &kp F3  &kp F12  &kp PRINTSCREEN
-                                          &trans         &trans         &trans           &trans    &trans  &trans
+                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &sys_reset    &kp F7  &kp F8  &kp F9  &kp F10
+                &sk LEFT_GUI   &sk LEFT_ALT   &sk LCTRL      &sk LEFT_SHIFT  &bt BT_CLR       &out OUT_BLE  &kp F4  &kp F5  &kp F6  &kp F11
+&bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_USB  &kp F1  &kp F2  &kp F3  &kp F12  &kp PRINTSCREEN
+                                              &trans         &trans          &trans           &trans        &trans  &trans
             >;
 
             label = "FUNC";
@@ -267,10 +222,10 @@
 
         Game {
             bindings = <
-          &kp TAB    &kp Q  &kp X       &kp E        &kp R        &trans  &trans  &trans  &trans  &trans
-          &kp LCTRL  &kp A  &kp W       &kp D        &kp F        &trans  &trans  &trans  &trans  &trans
-&kp LALT  &kp LSHFT  &kp Z  &kp S       &kp C        &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                            &kp ESCAPE  &lt 6 ENTER  &kp SPACE    &trans  &trans  &trans
+            &kp LCTRL       &kp Q  &kp X  &kp E    &kp R        &trans  &trans  &trans  &trans  &trans
+            &kp LEFT_SHIFT  &kp A  &kp W  &kp D    &kp F        &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp LEFT_ALT    &kp Z  &kp S  &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                                   &mo 5  &kp TAB  &kp SPACE    &trans  &trans  &trans
             >;
 
             label = "GAME";
@@ -279,21 +234,12 @@
         GamePlus {
             bindings = <
        &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans
-       &trans        &trans  &trans  &trans  &kp H     &trans  &trans  &trans  &trans  &trans
-&to 0  &trans        &trans  &trans  &kp T   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+       &kp I         &kp Y   &kp T   &kp H   &kp G     &trans  &trans  &trans  &trans  &trans
+&to 0  &trans        &trans  &kp B   &kp N   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "GAME+";
-        };
-
-        WM {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans     &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &trans
-        &trans  &trans  &trans  &trans  &trans    &kp LG(W)  &kp LG(N4)        &kp LG(N5)  &kp LG(N6)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp LG(NUMBER_1)  &kp LG(N2)  &kp LG(N3)  &trans  &trans
-                        &trans  &trans  &trans    &trans     &trans            &trans
-            >;
         };
     };
 };
