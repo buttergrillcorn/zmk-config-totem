@@ -36,7 +36,7 @@
 
         Escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -113,14 +113,14 @@
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <17 18 16>;
+            key-positions = <17 18>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         Tab {
             bindings = <&kp TAB>;
-            key-positions = <13 12>;
+            key-positions = <12 11>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -148,7 +148,7 @@
 
         Delete {
             bindings = <&kp DELETE>;
-            key-positions = <17 18>;
+            key-positions = <16 15>;
             timeout-ms = <50>;
             layers = <0>;
         };
