@@ -260,7 +260,7 @@
             bindings = <
        &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans
        &kp I         &kp Y   &kp T   &kp H   &kp G     &trans  &trans  &trans  &trans  &trans
-&to 0  &trans        &trans  &kp B   &kp N   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
+&to 0  &trans        &kp L   &kp B   &kp N   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
