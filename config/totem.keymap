@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -151,6 +152,91 @@
             key-positions = <16 15>;
             timeout-ms = <50>;
             layers = <0>;
+        };
+
+        B1 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <31 0>;
+        };
+
+        B2 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <31 1>;
+        };
+
+        B3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <31 2>;
+        };
+
+        B4 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <31 3>;
+        };
+
+        B5 {
+            bindings = <&bt BT_SEL 4>;
+            key-positions = <31 4>;
+        };
+
+        B1D {
+            bindings = <&bt BT_DISC 0>;
+            key-positions = <31 10>;
+        };
+
+        B2D {
+            bindings = <&bt BT_DISC 1>;
+            key-positions = <31 11>;
+        };
+
+        B3D {
+            bindings = <&bt BT_DISC 2>;
+            key-positions = <31 12>;
+        };
+
+        B4D {
+            bindings = <&bt BT_DISC 3>;
+            key-positions = <31 13>;
+        };
+
+        B5D {
+            bindings = <&bt BT_DISC 4>;
+            key-positions = <31 14>;
+        };
+
+        BCA {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <31 20>;
+        };
+
+        BC {
+            bindings = <&bt BT_CLR>;
+            key-positions = <31 21>;
+        };
+
+        EP-ON {
+            bindings = <&ext_power EP_ON>;
+            key-positions = <25 31>;
+        };
+
+        BT {
+            bindings = <&out OUT_BLE>;
+            key-positions = <23 31>;
+        };
+
+        USB {
+            bindings = <&out OUT_USB>;
+            key-positions = <31 24>;
+        };
+
+        Off {
+            bindings = <&soft_off>;
+            key-positions = <34>;
+        };
+
+        Reset {
+            bindings = <&sys_reset>;
+            key-positions = <0 21 9 30>;
         };
     };
 
