@@ -1,8 +1,8 @@
 include:
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_left rgbled_adapter
 
-  - board: xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_right rgbled_adapter
 
 # There is no settings_reset needed for the XIAO.
